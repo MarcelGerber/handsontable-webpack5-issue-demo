@@ -14,6 +14,9 @@ This is a complete reproducible setup for https://github.com/handsontable/handso
 So we can definitely that `registerCellTypes` works fine when imported using `import`, but not when using `require`.
 The two webpack assets are also part of this project, in `dist/index-broken.js` (when using `require`) and `dist/index-working.js` (when using `import`).
 
+`index-broken.js` contains imports of _both_ `cellTypes/registry.js` and `cellTypes/registry.mjs`, whereas `index-working.js` only contains imports of the latter!
+![image](https://user-images.githubusercontent.com/2641501/153682127-1d6f5939-d933-4e3b-ae52-6aa79633a886.png)
+
 # Screenshots
 
 Expected working state:
